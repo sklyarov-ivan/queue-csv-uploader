@@ -1,0 +1,27 @@
+{
+  "name": "queue-csv-uploader",
+  "description": "simple csv file uploader",
+  "main": "app.js",
+  "authors": [
+    "Sklyarov Ivan"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "queue",
+    "node",
+    "csv"
+  ],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/components/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "socket.io-client": "1.7.2",
+    "dropzone": "^4.3.0"
+  }
+}
