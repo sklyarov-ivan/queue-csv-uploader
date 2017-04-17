@@ -12,6 +12,7 @@ const io = require('socket.io-client');
 const deleteFolderRecursive = (path) => {
   if (fs.existsSync(path)) {
     fs.readdirSync(path).forEach((file) => {
+      if (file === '.gitkeep') return;
       const curPath = `${path}/${file}`;
       if (fs.lstatSync(curPath).isDirectory()) { // recurse
         deleteFolderRecursive(curPath);
