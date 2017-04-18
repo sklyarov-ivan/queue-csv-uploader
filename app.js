@@ -19,7 +19,11 @@ db.run(`CREATE TABLE IF NOT EXISTS users (
   Email varchar(50),
   created_at DATETIME)`);
 
-const jobs = kue.createQueue();
+const jobs = kue.createQueue({
+  redis: {
+    host: process.env.REDIS_HOST || '127.0.0.1',
+  },
+});
 const Job = kue.Job;
 const upload = multer({
   dest: 'uploads/',
